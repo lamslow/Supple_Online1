@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,21 +27,21 @@ public class SliderAdapter extends PagerAdapter {
     }
 
     private int[] slider_images = {
-            R.drawable.color,
-            R.drawable.deliverytruck,
-            R.drawable.pay,
+            R.drawable.welcome_slide_1,
+            R.drawable.welcome_slide_2,
+            R.drawable.welcome_slide_3,
     };
 
     private String[] slider_headings = {
-            "ĐA DẠNG SẢN PHẨM",
-            "GIAO HÀNG NHANH CHÓNG",
-            "ĐẶT HÀNG DỄ DÀNG"
+            "CHẤT LƯỢNG",
+            "TIỆN LỢI",
+            "CỘNG ĐỒNG"
     };
 
     private String[] slider_des = {
-            "Supple Online cung cấp cho người dùng không chỉ đầy đủ các loại thực phẩm chức năng mới nhất mà còn đảm bảo chất lượng luôn đi đầu so với thị trường.",
-            "Supple Online hiện đang liên kết với những đối tác vận chuyển lớn nhất toàn quốc giúp cho việc giao hàng diễn ra rất nhanh chóng",
-            "Với Supple Online bạn chỉ cần thêm hàng vào giỏ và có thể thanh toán dễ dàng tại bất cứ đâu, bất cứ lúc nào mà bạn mong muốn."
+            "Chúng tôi luôn cố gắng để đảm bảo việc cung cấp những dịch vụ có chất lượng cao nhất cho khách hàng và đối tác.",
+            "Không gì quan trọng bằng thời gian và sức khỏe của bạn. Chúng tôi cam kết cung cấp những giải pháp thể hình tốt nhất giúp bạn sống khỏe mạnh và năng động mọi lúc mọi nơi.",
+            "Chúng tôi luôn kết nối cộng đồng những người yêu thể thao để giáo dục mọi người về tầm quan trọng của lối sống năng động và khỏe mạnh, qua đó tạo dựng nên lối sống khỏe mạnh và năng động đến tất cả mọi người."
     };
 
     @Override
@@ -82,6 +83,6 @@ public class SliderAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        container.removeView((ConstraintLayout)object);
+        container.removeView((LinearLayout)object);
     }
 }

@@ -1,13 +1,11 @@
 package com.example.supple_online.screen;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.supple_online.BaseActivity;
+import com.example.supple_online.helper.BaseActivity;
 import com.example.supple_online.R;
 
 public class SignUpActivity extends BaseActivity {

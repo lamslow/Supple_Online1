@@ -40,7 +40,7 @@ public class SliderActivity extends AppCompatActivity {
             mDots[i] = new TextView(this);
             mDots[i].setText(Html.fromHtml("&#8226;"));
             mDots[i].setTextSize(35);
-            mDots[i].setTextColor(getResources().getColor(R.color.colorTransprentWhite));
+            mDots[i].setTextColor(getResources().getColor(R.color.colorWhite));
             mDotsLayout.addView(mDots[i]);
         }
 

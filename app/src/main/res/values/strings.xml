@@ -12,7 +12,7 @@
     <string name="slider_btn_discover">KHÁM PHÁ NGAY</string>
 
     <!--    Login-->
-    <string name="acti_login_welcome">Welcome Back!</string>
+    <string name="acti_login_welcome">Tiến bước vào tương lai ngành thể hình</string>
     <string name="acti_login_tvUsername">Tên đăng nhập</string>
     <string name="acti_login_tvPassword">Mật khẩu</string>
     <string name="acti_login_btnSignIn">Đăng nhập</string>
@@ -24,6 +24,7 @@
     <string name="acti_login_warnEmpty">Vui lòng nhập đầy đủ thông tin</string>
     <string name="acti_login_wronguserpass">Tên tài khoản hoặc mật khẩu không tồn tại</string>
     <string name="acti_login_successlogin">Đăng nhập thành công</string>
+    <string name="acti_dialog_forgetpass_username">Tên đăng nhập</string>
 
     <!--SignUpActivity-->
     <string name="acti_signup_username">Tên đăng nhập</string>
@@ -41,6 +42,7 @@
     <string name="acti_signup_successSignUp">Đăng ký thành công</string>
     <string name="acti_signup_warnCheckUser">Tên đăng nhập này đã có người sử dụng</string>
     <string name="acti_signup_warnPhone">Vui lòng nhập SĐT là số</string>
+    <string name="acti_btn_signUp">Đăng ký</string>
 
     <!--    HomeFragment-->
     <string name="home_whey">WHEY</string>
@@ -75,6 +77,7 @@
     <string name="acti_cart_warning">Số lượng phải lớn hơn 0</string>
     <string name="acti_payment_successVoucher">Mã khuyến mại đã được áp dụng</string>
     <string name="acti_payment_warningVoucher">Mã khuyến mại không tồn tại</string>
+
 
 </resources>
 

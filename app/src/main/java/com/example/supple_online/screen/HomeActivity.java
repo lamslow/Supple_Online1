@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.supple_online.BaseActivity;
+import com.example.supple_online.helper.BaseActivity;
 import com.example.supple_online.R;
 import com.example.supple_online.main_fragment.HomeFragment;
 import com.example.supple_online.main_fragment.MallFragment;

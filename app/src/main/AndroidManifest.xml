@@ -18,7 +18,7 @@
         <activity android:name=".screen.CartActivity" />
         <activity android:name=".screen.HomeActivity" />
         <activity android:name=".screen.SignUpActivity" />
-        <activity android:name=".BaseActivity" />
+        <activity android:name=".helper.BaseActivity" />
         <activity android:name=".screen.LoginActivity" />
         <activity android:name=".screen.SliderActivity" />
         <activity android:name=".screen.SplashActivity">

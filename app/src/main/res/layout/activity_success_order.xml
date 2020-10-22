@@ -36,7 +36,7 @@
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/button_black"
+        android:background="@drawable/button_dialog"
         android:drawableRight="@drawable/right_arrow"
         android:paddingRight="12dp"
         android:textColor="#ffffff"
