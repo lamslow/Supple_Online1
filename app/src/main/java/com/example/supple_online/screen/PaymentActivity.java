@@ -50,10 +50,6 @@ public class PaymentActivity extends BaseActivity {
         tvAddressPayment = (TextView) findViewById(R.id.tvAddressPayment);
         tvPhonePayment = (TextView) findViewById(R.id.tvPhonePayment);
         rvPayment = (RecyclerView) findViewById(R.id.rvPayment);
-        edtVoucherCode = (EditText) findViewById(R.id.edtVoucherCode);
-        btnCheckVoucher = (Button) findViewById(R.id.btnCheckVoucher);
         linearLayout2 = (LinearLayout) findViewById(R.id.linearLayout2);
-        tvSumPricePayment = (TextView) findViewById(R.id.tvSumPricePayment);
-        btnOrder = (Button) findViewById(R.id.btnOrder);
     }
 }

@@ -7,8 +7,11 @@
     <color name="colorDot">#64ef04</color>
     <color name="colorBlack">#000000</color>
     <color name="colorTextInCart">#ffffff</color>
-    <color name="colorGray">#f2f2f2</color>
-    <color name="colorTextinput">#64ef04</color>
+    <color name="colorGray">#AFAFAF</color>
     <color name="colorRed">#F60B0B</color>
     <color name="colorWhite">#FFF</color>
+    <color name="colorBackgroundLighterBlack">#3F3D3D</color>
+    <color name="colorCardInHome">#2B2929</color>
+    <color name="colorTextInSearch">#707070</color>
+    <color name="colorGold">#ffcc33</color>
 </resources>

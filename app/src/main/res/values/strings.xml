@@ -2,9 +2,13 @@
     <string name="app_name">Supple_Online</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Mall</string>
-    <string name="title_notifications">Thông báo</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_Finding_Mall">Find</string>
+    <string name="title_Map">Map</string>
     <string name="title_profile">Cá nhân</string>
-
+    <string name="player_error">Error initializing YouTube player: %s</string>
+    <string name="seek_to">Jump To</string>
+    <string name="seek_to_hint">Seconds</string>
 
     <!--    Slider-->
     <string name="slider_success_order">GIAO HÀNG NHANH CHÓNG</string>
@@ -72,12 +76,16 @@
 
     <!--Success Order Activity-->
     <string name="acti_success_order">Đặt hàng thành công</string>
-    <string name="acti_success_order_description">Đơn hang của bạn đã được đặt thành công. Vui lòng kiểm tra Đơn hàng của tôi để biết thêm chi tiết !</string>
+    <string name="acti_success_order_description">Đơn hàng của bạn đã được đặt thành công. Vui lòng kiểm tra mục "Đơn hàng của tôi" để biết thêm chi tiết !</string>
     <string name="acti_cart_delproduct">Xóa sản phẩm thành công</string>
     <string name="acti_cart_warning">Số lượng phải lớn hơn 0</string>
     <string name="acti_payment_successVoucher">Mã khuyến mại đã được áp dụng</string>
     <string name="acti_payment_warningVoucher">Mã khuyến mại không tồn tại</string>
+    <string name="acti_success_order_button_my_order_title">Đơn hàng của tôi</string>
 
-
+    <!--    Search-->
+    <string name="acti_search_product_title_text">Tìm kiếm sản phẩm...</string>
 </resources>
+
+
 

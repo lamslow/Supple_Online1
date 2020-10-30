@@ -8,9 +8,11 @@ import android.view.MenuItem;
 
 import com.example.supple_online.helper.BaseActivity;
 import com.example.supple_online.R;
+import com.example.supple_online.main_fragment.FindFragment;
 import com.example.supple_online.main_fragment.HomeFragment;
 import com.example.supple_online.main_fragment.MallFragment;
-import com.example.supple_online.main_fragment.ProfileFragment;
+import com.example.supple_online.main_fragment.MapFragment;
+import com.example.supple_online.main_fragment.NotificationFrament;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends BaseActivity {
@@ -31,10 +33,15 @@ public class HomeActivity extends BaseActivity {
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, selectFragment).commit();
                     break;
                 case R.id.navigation_notifications:
-                    startNewActivity(NotificationActivity.class);
+                    selectFragment = new NotificationFrament();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, selectFragment).commit();
                     break;
-                case R.id.navigation_profile:
-                    selectFragment = new ProfileFragment();
+                case R.id.navigation_finding_coach:
+                    selectFragment = new FindFragment();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, selectFragment).commit();
+                    break;
+                case R.id.navigation_map:
+                    selectFragment = new MapFragment();
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, selectFragment).commit();
                     break;
             }

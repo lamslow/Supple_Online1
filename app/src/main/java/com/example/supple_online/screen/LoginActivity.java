@@ -45,7 +45,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             startNewActivity(HomeActivity.class);
         } else if(view == tvForgotPass) {
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(this);
-            View mView = View.inflate(this, R.layout.forget_password_item, null);
+            View mView = View.inflate(this, R.layout.dialog_forget_password, null);
             mBuilder.setView(mView);
             mBuilder.setCancelable(true);
             final AlertDialog dialog = mBuilder.create();

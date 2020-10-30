@@ -52,7 +52,7 @@
             android:layout_height="50dp"
             android:id="@+id/btnSlider"
             android:layout_marginTop="20dp"
-            android:background="@drawable/button_discover"
+            android:background="@drawable/button_login"
             android:text="@string/slider_btn_discover"
             android:textSize="16dp"
             android:textColor="@color/colorBlack"

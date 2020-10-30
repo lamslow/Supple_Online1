@@ -36,11 +36,10 @@
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/button_dialog"
-        android:drawableRight="@drawable/right_arrow"
+        android:background="@drawable/button_search"
         android:paddingRight="12dp"
         android:textColor="#ffffff"
-        android:text="Đơn hàng của tôi"
+        android:text="@string/acti_success_order_button_my_order_title"
         android:textStyle="bold" />
 
 

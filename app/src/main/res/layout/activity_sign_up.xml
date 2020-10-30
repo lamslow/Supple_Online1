@@ -186,7 +186,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_margin="16dp"
-            android:background="@drawable/button_discover"
+            android:background="@drawable/button_login"
             android:text="@string/acti_btn_signUp"
             android:textColor="@color/colorBlack"
             android:textSize="16sp"

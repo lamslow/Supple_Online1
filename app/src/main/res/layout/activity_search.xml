@@ -14,37 +14,34 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:background="#7C7D8D"
+            android:background="@color/colorBackgroundLighterBlack"
             android:gravity="center"
             android:orientation="horizontal"
-            android:weightSum="10">
+            android:weightSum="9">
 
             <ImageButton
                 android:id="@+id/btnBack"
                 android:layout_width="0dp"
                 android:layout_height="22dp"
                 android:layout_weight="0.6"
-                android:background="@drawable/goback" />
+                android:background="@drawable/ic_baseline_arrow_back_ios_24" />
 
             <AutoCompleteTextView
+                android:gravity="center"
                 android:id="@+id/actvNameProduct"
                 android:layout_width="0dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginEnd="15dp"
-                android:layout_weight="8"
-                android:background="@drawable/button_search_gray"
-                android:gravity="center"
-                android:hint="Nhập sản phẩm muốn tìm kiếm"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="15dp"
+                android:drawableStart="@drawable/ic_baseline_search_24"
+                android:layout_weight="7"
+                android:background="@drawable/button_search"
+                android:textColorHint="@color/colorTextInSearch"
+                android:textColor="@color/colorWhite"
+                android:hint="@string/acti_search_product_title_text"
                 android:textSize="15dp"
                 android:textStyle="normal" />
-
-            <Button
-                android:id="@+id/btnSearchProduct"
-                android:layout_width="0dp"
-                android:layout_height="24dp"
-                android:layout_weight="0.7"
-                android:background="@drawable/ic_search_black_24dp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
