@@ -1,6 +1,5 @@
 package com.example.supple_online.main_fragment;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -22,7 +21,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.supple_online.R;
-import com.example.supple_online.adapter.CoachesAdapter;
+import com.example.supple_online.adapter.CoachSuggestionsAdapter;
 import com.example.supple_online.adapter.LessonsAdapter;
 import com.example.supple_online.adapter.NewsAdapter;
 import com.example.supple_online.adapter.SliderHomeAdapter;
@@ -167,6 +166,7 @@ public class HomeFragment extends Fragment {
         rcvListLessonsHome.setHasFixedSize(true);
         rcvListLessonsHome.setNestedScrollingEnabled(false);
         rcvListLessonsHome.scheduleLayoutAnimation();
+        lessonsAdapter.notifyDataSetChanged();
     }
 
     private SliderView sliderView;
@@ -191,17 +191,17 @@ public class HomeFragment extends Fragment {
     }
 
     private List<Coach> coachList;
-    private CoachesAdapter coachesAdapter;
+    private CoachSuggestionsAdapter coachesAdapter;
     private void getCoachSuggestionHome() {
         coachList = new ArrayList<>();
         coachList.clear();
-        Coach coach = new Coach("Monu - Yoga Instructor", R.drawable.coach_1);
-        Coach coach2 = new Coach("Hoàng Hiển - Personal Trainer", R.drawable.coach_2);
-        Coach coach3 = new Coach("Walter Veale FitNation", R.drawable.coach_3);
+        Coach coach = new Coach("Monu - Gym Instructor", R.drawable.coach_1, "Huấn luyện viên Gym", "4", "75");
+        Coach coach2 = new Coach("Hoàng Hiển - Personal Trainer", R.drawable.coach_2, "Huấn luyện viên Bơi", "5", "100");
+        Coach coach3 = new Coach("Walter Veale FitNation", R.drawable.coach_3, "Huấn luyện viên Kick Boxing", "5", "75");
         coachList.add(coach2);
         coachList.add(coach);
         coachList.add(coach3);
-        coachesAdapter = new CoachesAdapter(getContext(), coachList);
+        coachesAdapter = new CoachSuggestionsAdapter(getContext(), coachList);
         rcvListSuggestionCoachHome.setAdapter(coachesAdapter);
         gridLayoutManager = new GridLayoutManager(getContext(), 1, GridLayoutManager.HORIZONTAL, false);
         gridLayoutManager.setAutoMeasureEnabled(true);
@@ -209,6 +209,7 @@ public class HomeFragment extends Fragment {
         rcvListSuggestionCoachHome.setHasFixedSize(true);
         rcvListSuggestionCoachHome.setNestedScrollingEnabled(false);
         rcvListSuggestionCoachHome.scheduleLayoutAnimation();
+        coachesAdapter.notifyDataSetChanged();
     }
 
 }

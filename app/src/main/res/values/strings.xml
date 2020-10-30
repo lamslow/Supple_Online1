@@ -85,6 +85,7 @@
 
     <!--    Search-->
     <string name="acti_search_product_title_text">Tìm kiếm sản phẩm...</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
 
 
