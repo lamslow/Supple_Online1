@@ -40,7 +40,7 @@
                 android:drawableLeft="@drawable/ic_baseline_search_24"
                 android:paddingStart="10dp"
                 android:paddingEnd="30dp"
-                android:text="Tìm kiếm sản phẩm"
+                android:text="Tìm kiếm huấn luyện viên..."
                 android:textAllCaps="false"
                 android:textColor="#A5A5A5"
                 android:textSize="15dp"

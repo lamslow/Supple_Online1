@@ -61,7 +61,7 @@
                 android:drawableLeft="@drawable/ic_baseline_search_24"
                 android:paddingStart="15dp"
                 android:paddingEnd="30dp"
-                android:text="Tìm kiếm sản phẩm"
+                android:text="Tìm kiếm sản phẩm..."
                 android:textAllCaps="false"
                 android:textColor="@color/colorTextInSearch"
                 android:textSize="15dp"

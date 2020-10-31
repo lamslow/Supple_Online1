@@ -151,7 +151,7 @@ public class HomeFragment extends Fragment {
         lessonsList = new ArrayList<>();
         lessonsList.clear();
         Lesson lessons = new Lesson("XAxycuZPxQE", "BÀI TẬP MÔNG QUẢ ĐÀO | KHẮC PHỤC MÔNG HÓP | 30 phút HIP DIP", R.drawable.lesson_1_home);
-        Lesson lessons2 = new Lesson("fKhpHe-Mo9I&t", "Bốn LÝ DO khiến bạn TẬP NGỰC mãi không lên & GIẢI PHÁP", R.drawable.lesson_2_home);
+        Lesson lessons2 = new Lesson("8zwL-hcU9-Y", "Bốn LÝ DO khiến bạn TẬP NGỰC mãi không lên & GIẢI PHÁP", R.drawable.lesson_2_home);
         Lesson lessons3 = new Lesson("ehpFsiDIbuc", "15 sai lầm phổ biến trong việc tập luyện bạn cần từ bỏ", R.drawable.lesson_4_home);
         Lesson lessons4 = new Lesson("mra27LEwpS8", "Cách để Đốt nhiều Mỡ Hơn Khi Ngủ", R.drawable.lesson_3_home);
         lessonsList.add(lessons);
@@ -211,5 +211,4 @@ public class HomeFragment extends Fragment {
         rcvListSuggestionCoachHome.scheduleLayoutAnimation();
         coachesAdapter.notifyDataSetChanged();
     }
-
 }
