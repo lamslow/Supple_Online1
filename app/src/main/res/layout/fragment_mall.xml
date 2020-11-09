@@ -80,6 +80,7 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/llSuppleFragment"
             android:layout_marginBottom="15dp"
             android:layout_marginTop="15dp"
             android:layout_weight="1"
@@ -104,6 +105,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/llClothesFragment"
             android:layout_marginBottom="15dp"
             android:layout_marginTop="15dp"
             android:layout_weight="1"
@@ -113,7 +115,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="70dp"
+                android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:background="@drawable/store_clothes" />
@@ -128,6 +130,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/llToolsFragment"
             android:layout_marginBottom="15dp"
             android:layout_marginTop="15dp"
             android:layout_weight="1"

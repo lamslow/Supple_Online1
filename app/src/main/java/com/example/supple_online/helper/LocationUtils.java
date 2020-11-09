@@ -8,7 +8,7 @@ import android.location.LocationManager;
 import androidx.core.app.ActivityCompat;
 
 public class LocationUtils {
-    private final long MIN_TIME = 30000; // milliseconds
+    private final long MIN_TIME = 500; // milliseconds
     private final float MIN_DISTANCE = 20; // meters
 
     private static LocationUtils instance = new LocationUtils();

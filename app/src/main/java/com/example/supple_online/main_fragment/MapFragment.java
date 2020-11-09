@@ -168,55 +168,59 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, android
 
     @SuppressLint("ResourceType")
     private void setCurrentLocationOnMap(final double lat, final double lng) {
-        final LatLng defaultLocation = new LatLng(lat, lng);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(defaultLocation, 18));
-        if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
-        // Extract My Location View from maps fragment
-        locationButton = mapFragment.getView().findViewById(0x2);
-        mMap.setMyLocationEnabled(true);
-        if (locationButton != null)
-            locationButton.setVisibility(View.GONE);
-        mMap.getUiSettings().setMapToolbarEnabled(false);
-        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-            @Override
-            public void onMapClick(LatLng latLng) {
-                MarkerOptions markerOptions = new MarkerOptions();
-                markerOptions.position(defaultLocation);
-                markerOptions.title("Bạn đang ở đây");
-                markerOptions.snippet("Vượng đẹp trai biết điều đó");
-                markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
-                mMap.clear();
-                mMap.addMarker(markerOptions);
+        try {
+            final LatLng defaultLocation = new LatLng(lat, lng);
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(defaultLocation, 18));
+            if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                // TODO: Consider calling
+                //    ActivityCompat#requestPermissions
+                // here to request the missing permissions, and then overriding
+                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                //                                          int[] grantResults)
+                // to handle the case where the user grants the permission. See the documentation
+                // for ActivityCompat#requestPermissions for more details.
+                return;
             }
-        });
-
-        fbFind_my_location.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mMap != null) {
-                    if (locationButton != null)
-                        locationButton.callOnClick();
+            SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+            // Extract My Location View from maps fragment
+            locationButton = mapFragment.getView().findViewById(0x2);
+            mMap.setMyLocationEnabled(true);
+            if (locationButton != null)
+                locationButton.setVisibility(View.GONE);
+            mMap.getUiSettings().setMapToolbarEnabled(false);
+            mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+                @Override
+                public void onMapClick(LatLng latLng) {
+                    MarkerOptions markerOptions = new MarkerOptions();
+                    markerOptions.position(defaultLocation);
+                    markerOptions.title("Bạn đang ở đây");
+                    markerOptions.snippet("Vượng đẹp trai biết điều đó");
+                    markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
+                    mMap.clear();
+                    mMap.addMarker(markerOptions);
                 }
-            }
-        });
+            });
 
-        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-            @Override
-            public boolean onMarkerClick(Marker marker) {
-                Toast.makeText(getContext(), "Đã lưu tọa độ vào khay nhớ tạm", Toast.LENGTH_SHORT).show();
-                return false;
-            }
-        });
+            fbFind_my_location.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mMap != null) {
+                        if (locationButton != null)
+                            locationButton.callOnClick();
+                    }
+                }
+            });
+
+            mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+                @Override
+                public boolean onMarkerClick(Marker marker) {
+                    Toast.makeText(getContext(), "Đã lưu tọa độ vào khay nhớ tạm", Toast.LENGTH_SHORT).show();
+                    return false;
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 //    private BitmapDescriptor bitmapDescriptorFromVector(Context context, @DrawableRes int vectorDrawableResourceId) {
 //        Drawable background = ContextCompat.getDrawable(context, R.drawable.ic_baseline_location_on_24);

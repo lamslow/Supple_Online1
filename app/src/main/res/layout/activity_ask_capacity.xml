@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorBlack"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".screen.AskCapacityActivity">
+
+    <LinearLayout android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/button_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:contentDescription="TODO"
+            android:layout_marginTop="8dp"
+            android:layout_width="135dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center"
+            android:background="@drawable/logo" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorDot"
+            android:textStyle="bold"
+            android:text="Bạn đăng ký với vai trò ?"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <RadioGroup
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:textColor="@color/colorDot"
+                android:text="Học viên"
+                android:buttonTint="@color/colorDot"
+                android:id="@+id/btnRadioStudent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:layout_marginStart="30dp"
+                android:textColor="@color/colorDot"
+                android:buttonTint="@color/colorDot"
+                android:text="Huấn luyện viên"
+                android:id="@+id/btnRadioCoach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+
+        <Button
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:id="@+id/btnNextToAskAddress"
+            android:text="TIẾP TỤC"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:background="@drawable/button_dialog"
+            android:textColor="@color/colorDot"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

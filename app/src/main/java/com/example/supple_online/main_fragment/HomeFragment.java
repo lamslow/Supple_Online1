@@ -30,7 +30,9 @@ import com.example.supple_online.model.ImageSlider;
 import com.example.supple_online.model.Lesson;
 import com.example.supple_online.model.New;
 import com.example.supple_online.screen.CartActivity;
+import com.example.supple_online.screen.ProfileActivity;
 import com.example.supple_online.screen.SearchActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
@@ -38,16 +40,19 @@ import com.smarteist.autoimageslider.SliderView;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.supple_online.screen.HomeActivity.navigation;
+
 public class HomeFragment extends Fragment {
 
     private ViewFlipper viewFlipper;
     private Button btnSearch;
-    private ImageButton btnCart;
-    private TextView tvNumberInCart;
+    private ImageButton btnInbox;
+    private TextView tvNumberInInbox;
     private RecyclerView rcvListNewsHome, rcvListLessonsHome, rcvListSuggestionCoachHome;
     private GridLayoutManager gridLayoutManager;
     private NestedScrollView scrollView_home;
     private LinearLayout llHeader;
+    private ImageButton btnProfile;
 
     @Nullable
     @Override
@@ -63,19 +68,21 @@ public class HomeFragment extends Fragment {
             flipperImages(image);
         }
 
-        btnCart.setOnClickListener(new View.OnClickListener() {
+
+        btnInbox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), CartActivity.class);
-                startActivity(intent);
+
             }
         });
 
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), SearchActivity.class);
-                startActivity(intent);
+                FindFragment findFragment = new FindFragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, findFragment,"toFindFragment")
+                        .addToBackStack(null).commit();
+                navigation.setSelectedItemId(R.id.navigation_finding_coach);
             }
         });
 
@@ -92,6 +99,14 @@ public class HomeFragment extends Fragment {
 //            }
 //        });
 
+        btnProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 
@@ -107,8 +122,8 @@ public class HomeFragment extends Fragment {
 
     private void initView(View view) {
         btnSearch = (Button) view.findViewById(R.id.btnSearch);
-        btnCart = (ImageButton) view.findViewById(R.id.btnCart);
-        tvNumberInCart = (TextView) view.findViewById(R.id.tvNumberInCart);
+        btnInbox = (ImageButton) view.findViewById(R.id.btnInbox);
+        tvNumberInInbox = (TextView) view.findViewById(R.id.tvNumberInInbox);
         viewFlipper = (ViewFlipper) view.findViewById(R.id.vpSlider);
         rcvListNewsHome = (RecyclerView) view.findViewById(R.id.rcvListNewsHome);
         rcvListLessonsHome = (RecyclerView) view.findViewById(R.id.rcvListLessonsHome);
@@ -116,6 +131,8 @@ public class HomeFragment extends Fragment {
         llHeader = (LinearLayout) view.findViewById(R.id.llHeader);
         sliderView = (SliderView) view.findViewById(R.id.imageSlider);
         rcvListSuggestionCoachHome = (RecyclerView) view.findViewById(R.id.rcvListSuggestionCoachHome);
+        btnProfile = (ImageButton) view.findViewById(R.id.btnProfile);
+
     }
 
 
@@ -171,6 +188,7 @@ public class HomeFragment extends Fragment {
 
     private SliderView sliderView;
     List<ImageSlider> imageSliderList;
+
     private void getImageSliderHome() {
         ImageSlider imageSlider = new ImageSlider(R.drawable.banner_slide_1);
         ImageSlider imageSlider2 = new ImageSlider(R.drawable.banner_slide_2);
@@ -192,6 +210,7 @@ public class HomeFragment extends Fragment {
 
     private List<Coach> coachList;
     private CoachSuggestionsAdapter coachesAdapter;
+
     private void getCoachSuggestionHome() {
         coachList = new ArrayList<>();
         coachList.clear();

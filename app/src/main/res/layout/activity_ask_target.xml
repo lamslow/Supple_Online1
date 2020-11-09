@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorBlack"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".screen.AskTargetActivity">
+
+    <LinearLayout android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/button_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:contentDescription="TODO"
+            android:layout_marginTop="8dp"
+            android:layout_width="135dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center"
+            android:background="@drawable/logo" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorDot"
+            android:textStyle="bold"
+            android:text="Mục tiêu của bạn ?"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/spnTarget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorDot" />
+
+            <ImageView
+                android:layout_alignRight="@+id/spnTarget"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:id="@+id/btnNextToAskAge"
+            android:text="TIẾP TỤC"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:background="@drawable/button_dialog"
+            android:textColor="@color/colorDot"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

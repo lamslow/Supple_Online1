@@ -29,4 +29,5 @@
         <item name="colorControlNormal">@color/colorGray</item>
         <item name="colorControlActivated">@color/colorGold</item>
     </style>
+
 </resources>

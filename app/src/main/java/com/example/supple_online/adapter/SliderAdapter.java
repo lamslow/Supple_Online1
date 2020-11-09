@@ -15,6 +15,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.example.supple_online.R;
+import com.example.supple_online.screen.AskCapacityActivity;
 import com.example.supple_online.screen.LoginActivity;
 
 public class SliderAdapter extends PagerAdapter {

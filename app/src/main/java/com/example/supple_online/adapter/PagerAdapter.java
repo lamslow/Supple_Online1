@@ -6,9 +6,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.supple_online.mall_fragment.BCAAFragment;
-import com.example.supple_online.mall_fragment.MassFragment;
-import com.example.supple_online.mall_fragment.WheyFragment;
+import com.example.supple_online.mall_fragment.SuppleFragment;
+import com.example.supple_online.mall_fragment.ToolsFragment;
+import com.example.supple_online.mall_fragment.ClothesFragment;
 
 public class PagerAdapter extends FragmentStatePagerAdapter {
     public PagerAdapter(@NonNull FragmentManager fm) {
@@ -21,13 +21,13 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
         Fragment fragment = null;
         switch (position) {
             case 0:
-                fragment = new WheyFragment();
+                fragment = new ClothesFragment();
                 break;
             case 1:
-                fragment = new MassFragment();
+                fragment = new ToolsFragment();
                 break;
             case 2:
-                fragment = new BCAAFragment();
+                fragment = new SuppleFragment();
                 break;
         }
         return fragment;

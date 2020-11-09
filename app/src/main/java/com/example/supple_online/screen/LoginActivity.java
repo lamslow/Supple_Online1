@@ -40,7 +40,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     @Override
     public void onClick(View view) {
         if(view == tvDangKy) {
-            startNewActivity(SignUpActivity.class);
+            startNewActivity(AskCapacityActivity.class);
         } else if (view == btnSignIn){
             startNewActivity(HomeActivity.class);
         } else if(view == tvForgotPass) {

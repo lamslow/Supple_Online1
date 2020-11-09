@@ -8,8 +8,10 @@
     tools:context=".screen.SliderActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/sliderViewPager"
         android:layout_width="0dp"

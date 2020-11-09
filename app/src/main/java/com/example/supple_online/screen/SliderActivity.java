@@ -13,8 +13,9 @@ import android.widget.TextView;
 
 import com.example.supple_online.R;
 import com.example.supple_online.adapter.SliderAdapter;
+import com.example.supple_online.helper.BaseActivity;
 
-public class SliderActivity extends AppCompatActivity {
+public class SliderActivity extends BaseActivity {
 
     ViewPager viewPager;
     private LinearLayout mDotsLayout;
@@ -70,8 +71,7 @@ public class SliderActivity extends AppCompatActivity {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SliderActivity.this, LoginActivity.class);
-                startActivity(intent);
+               startNewActivity(LoginActivity.class);
             }
         });
     }

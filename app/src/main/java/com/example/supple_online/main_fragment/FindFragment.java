@@ -1,11 +1,12 @@
 package com.example.supple_online.main_fragment;
 
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.AutoCompleteTextView;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,30 +17,46 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.supple_online.R;
 import com.example.supple_online.adapter.CoachesAdapter;
 import com.example.supple_online.model.Coach;
+import com.example.supple_online.screen.MatchProfileActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FindFragment extends Fragment {
-    private Button btnSearch;
+
+    private AutoCompleteTextView actvNameHLV;
     private RecyclerView rcvListCoachInFind;
     private GridLayoutManager gridLayoutManager;
+    private ImageView btnMatchProfile;
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_find, container, false);
         initView(view);
         getCoachList();
+        btnMatchProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), MatchProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 
     private void initView(View view) {
-        btnSearch = (Button) view.findViewById(R.id.btnSearch);
+        actvNameHLV = (AutoCompleteTextView) view.findViewById(R.id.actvNameHLV);
         rcvListCoachInFind = (RecyclerView) view.findViewById(R.id.rcvListCoachInFind);
+        btnMatchProfile = (ImageView) view.findViewById(R.id.btnMatchProfile);
     }
 
     private List<Coach> coachList;
     private CoachesAdapter coachesAdapter;
+
     private void getCoachList() {
         coachList = new ArrayList<>();
         coachList.clear();
