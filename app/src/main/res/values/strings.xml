@@ -76,12 +76,12 @@
 
     <!--Success Order Activity-->
     <string name="acti_success_order">Đặt hàng thành công</string>
-    <string name="acti_success_order_description">Đơn hàng của bạn đã được đặt thành công. Vui lòng kiểm tra mục "Đơn hàng của tôi" để biết thêm chi tiết !</string>
+    <string name="acti_success_order_description">Đơn hàng của bạn đã được đặt thành công. Vui lòng kiểm tra mục <b>Đơn hàng của bạn</b> để biết thêm chi tiết !</string>
     <string name="acti_cart_delproduct">Xóa sản phẩm thành công</string>
     <string name="acti_cart_warning">Số lượng phải lớn hơn 0</string>
     <string name="acti_payment_successVoucher">Mã khuyến mại đã được áp dụng</string>
     <string name="acti_payment_warningVoucher">Mã khuyến mại không tồn tại</string>
-    <string name="acti_success_order_button_my_order_title">Đơn hàng của tôi</string>
+    <string name="acti_success_order_button_my_order_title">Trang chủ</string>
 
     <!--    Search-->
     <string name="acti_search_product_title_text">Tìm kiếm sản phẩm...</string>

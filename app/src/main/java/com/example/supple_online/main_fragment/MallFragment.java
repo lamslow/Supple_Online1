@@ -20,7 +20,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.supple_online.R;
 import com.example.supple_online.adapter.ProductsAdapter;
+import com.example.supple_online.mall_fragment.ClothesFragment;
+import com.example.supple_online.mall_fragment.SuppleFragment;
+import com.example.supple_online.mall_fragment.ToolsFragment;
 import com.example.supple_online.model.Product;
+import com.example.supple_online.screen.CartActivity;
 import com.example.supple_online.screen.SearchActivity;
 
 import java.util.ArrayList;
@@ -57,10 +61,38 @@ public class MallFragment extends Fragment {
             }
         });
 
+        btnMallCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), CartActivity.class);
+                startActivity(intent);
+            }
+        });
+
         llSuppleFragment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SuppleFragment suppleFragment = new SuppleFragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, suppleFragment, "toSuppleFragment")
+                        .addToBackStack(null).commit();
+            }
+        });
 
+        llClothesFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ClothesFragment clothesFragment = new ClothesFragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, clothesFragment, "toClothesFragment")
+                        .addToBackStack(null).commit();
+            }
+        });
+
+        llToolsFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToolsFragment toolsFragment = new ToolsFragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, toolsFragment, "toToolsFragment")
+                        .addToBackStack(null).commit();
             }
         });
 

@@ -1,6 +1,7 @@
 package com.example.supple_online.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.supple_online.R;
 import com.example.supple_online.model.New;
+import com.example.supple_online.screen.DetailNewsActivity;
 
 import java.util.List;
 
@@ -34,10 +36,18 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.Holder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Holder holder, int position) {
+    public void onBindViewHolder(@NonNull final Holder holder, int position) {
         holder.news = newsList.get(position);
         holder.mImvImageNew.setImageResource(holder.news.getImage());
         holder.mTvTitleNew.setText(holder.news.getTitle());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DetailNewsActivity.class);
+                intent.putExtra("titleNews", holder.news.getTitle());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

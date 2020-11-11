@@ -1,6 +1,7 @@
 package com.example.supple_online.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.supple_online.R;
 import com.example.supple_online.helper.Config;
 import com.example.supple_online.model.Product;
+import com.example.supple_online.screen.DetailProductActivity;
 
 import java.util.List;
 
@@ -35,12 +37,23 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Holder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Holder holder, int position) {
+    public void onBindViewHolder(@NonNull final Holder holder, int position) {
         holder.product = productList.get(position);
         holder.imvImageNew.setImageResource(holder.product.getImage());
         holder.tvTitleNew.setText(holder.product.getName());
         holder.tvPriceProduct.setText(Config.decimalFormat.format(Integer.parseInt(holder.product.getPrice())) + " Đ");
         holder.ratingProductMall.setRating(Float.parseFloat(holder.product.getVote()));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DetailProductActivity.class);
+                intent.putExtra("imageProduct", holder.product.getImage());
+                intent.putExtra("nameProduct", holder.product.getName());
+                intent.putExtra("priceProduct", holder.product.getPrice());
+                intent.putExtra("votePointsProduct", holder.product.getVote());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

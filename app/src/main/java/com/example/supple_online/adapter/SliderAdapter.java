@@ -11,11 +11,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.example.supple_online.R;
-import com.example.supple_online.screen.AskCapacityActivity;
 import com.example.supple_online.screen.LoginActivity;
 
 public class SliderAdapter extends PagerAdapter {
@@ -59,7 +57,7 @@ public class SliderAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.slider_layout, container, false);
+        View view = layoutInflater.inflate(R.layout.item_slider, container, false);
 
         ImageView sliderImageView = view.findViewById(R.id.imgSlider);
         TextView tvHeading = view.findViewById(R.id.tvHeading);

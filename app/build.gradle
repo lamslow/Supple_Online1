@@ -36,4 +36,5 @@ dependencies {
     implementation 'com.github.GrenderG:Toasty:1.4.2'
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
     implementation 'com.github.smarteist:autoimageslider:1.4.0'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
 }

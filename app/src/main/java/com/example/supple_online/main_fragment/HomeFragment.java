@@ -25,14 +25,12 @@ import com.example.supple_online.adapter.CoachSuggestionsAdapter;
 import com.example.supple_online.adapter.LessonsAdapter;
 import com.example.supple_online.adapter.NewsAdapter;
 import com.example.supple_online.adapter.SliderHomeAdapter;
+import com.example.supple_online.inbox_fragment.FollowedCoachFragment;
 import com.example.supple_online.model.Coach;
 import com.example.supple_online.model.ImageSlider;
 import com.example.supple_online.model.Lesson;
 import com.example.supple_online.model.New;
-import com.example.supple_online.screen.CartActivity;
-import com.example.supple_online.screen.ProfileActivity;
-import com.example.supple_online.screen.SearchActivity;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.example.supple_online.profile_fragment.ProfileFragment;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
@@ -102,8 +100,18 @@ public class HomeFragment extends Fragment {
         btnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), ProfileActivity.class);
-                startActivity(intent);
+                ProfileFragment profileFragment = new ProfileFragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, profileFragment, "toProfileFragment")
+                        .addToBackStack(null).commit();
+            }
+        });
+
+        btnInbox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FollowedCoachFragment followedCoachFragment = new FollowedCoachFragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, followedCoachFragment, "toFollowedCoachFragment")
+                        .addToBackStack(null).commit();
             }
         });
 

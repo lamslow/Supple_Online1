@@ -1,49 +1,40 @@
 package com.example.supple_online.screen;
 
-import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.supple_online.helper.BaseActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.supple_online.R;
+import com.example.supple_online.helper.BaseActivity;
 
 public class PaymentActivity extends BaseActivity {
+
 
     private TextView tvFullNamePayment;
     private TextView tvAddressPayment;
     private TextView tvPhonePayment;
     private RecyclerView rvPayment;
-    private EditText edtVoucherCode;
-    private Button btnCheckVoucher;
     private LinearLayout linearLayout2;
-    private TextView tvSumPricePayment;
-    private Button btnOrder;
+    private TextView tvSumPrice;
+    private Button btnPayment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
         initView();
-
-        btnCheckVoucher.setOnClickListener(new View.OnClickListener() {
+        btnPayment.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                showMessegeSuccess("Chưa cập nhật");
-            }
-        });
-
-        btnOrder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 startNewActivity(SuccessOrderActivity.class);
             }
         });
-
     }
+
 
     private void initView() {
         tvFullNamePayment = (TextView) findViewById(R.id.tvFullNamePayment);
@@ -51,5 +42,7 @@ public class PaymentActivity extends BaseActivity {
         tvPhonePayment = (TextView) findViewById(R.id.tvPhonePayment);
         rvPayment = (RecyclerView) findViewById(R.id.rvPayment);
         linearLayout2 = (LinearLayout) findViewById(R.id.linearLayout2);
+        tvSumPrice = (TextView) findViewById(R.id.tvSumPrice);
+        btnPayment = (Button) findViewById(R.id.btnPayment);
     }
 }

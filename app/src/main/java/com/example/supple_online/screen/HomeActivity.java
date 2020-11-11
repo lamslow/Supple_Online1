@@ -3,6 +3,7 @@ package com.example.supple_online.screen;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -13,6 +14,7 @@ import com.example.supple_online.main_fragment.HomeFragment;
 import com.example.supple_online.main_fragment.MallFragment;
 import com.example.supple_online.main_fragment.MapFragment;
 import com.example.supple_online.main_fragment.NotificationFrament;
+import com.example.supple_online.profile_fragment.MyOrderFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends BaseActivity {
@@ -50,6 +52,11 @@ public class HomeActivity extends BaseActivity {
     };
 
     public static BottomNavigationView navigation;
+
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

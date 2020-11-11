@@ -17,13 +17,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".screen.AskCharacterActivity"></activity>
+        <activity android:name=".inbox_fragment.FollowedCoachFragment"></activity>
+        <activity android:name=".screen.DetailProductActivity" />
+        <activity android:name=".screen.DetailNewsActivity" />
+        <activity android:name=".screen.AskCharacterActivity" />
         <activity android:name=".screen.AskAgeActivity" />
         <activity android:name=".screen.AskTargetActivity" />
         <activity android:name=".screen.AskAddressActivity" />
         <activity android:name=".screen.AskCapacityActivity" />
         <activity android:name=".screen.MatchProfileActivity" />
-        <activity android:name=".screen.ProfileActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -43,24 +45,23 @@
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity android:name=".screen.SuccessOrderActivity" />
         <activity android:name=".screen.PaymentActivity" />
-        <activity android:name=".screen.MyOrderActivity" />
         <activity android:name=".screen.SearchActivity" />
         <activity android:name=".screen.CartActivity" />
         <activity
             android:name=".screen.HomeActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait" />
-        <activity android:name=".screen.SignUpActivity" />
-        <activity android:name=".helper.BaseActivity" />
-        <activity android:name=".screen.LoginActivity" />
-        <activity android:name=".screen.SliderActivity" />
-        <activity android:name=".screen.SplashActivity">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".screen.SignUpActivity" />
+        <activity android:name=".helper.BaseActivity" />
+        <activity android:name=".screen.LoginActivity" />
+        <activity android:name=".screen.SliderActivity" />
+        <activity android:name=".screen.SplashActivity" />
     </application>
 
 </manifest>
