@@ -1,6 +1,7 @@
 package com.example.supple_online.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,8 @@ import androidx.appcompat.widget.AppCompatRatingBar;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.supple_online.R;
 import com.example.supple_online.model.Coach;
+import com.example.supple_online.screen.DetailCoachActivity;
+
 import java.util.List;
 
 public class CoachesAdapter extends RecyclerView.Adapter<CoachesAdapter.Holder> {
@@ -43,6 +46,13 @@ public class CoachesAdapter extends RecyclerView.Adapter<CoachesAdapter.Holder> 
             @Override
             public void onClick(View view) {
 
+            }
+        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DetailCoachActivity.class);
+                context.startActivity(intent);
             }
         });
     }

@@ -5,12 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-
 import com.example.supple_online.helper.BaseActivity;
 import com.example.supple_online.R;
-import com.example.supple_online.profile_fragment.MyOrderFragment;
 
 public class SuccessOrderActivity extends BaseActivity {
 
@@ -24,7 +20,7 @@ public class SuccessOrderActivity extends BaseActivity {
         btnMyOrders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SuccessOrderActivity.this, HomeActivity.class);
+                Intent intent = new Intent(SuccessOrderActivity.this, HomeUserActivity.class);
                 startActivity(intent);
             }
         });

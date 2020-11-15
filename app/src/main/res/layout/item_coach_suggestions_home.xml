@@ -27,14 +27,14 @@
         android:layout_height="wrap_content"/>
 
     <Button
-        android:layout_marginTop="10dp"
         android:id="@+id/btnFollowCoachesBySuggestionHome"
-        android:text="THEO DÕI"
         android:layout_width="80dp"
-        android:layout_height="25dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/button_dialog"
-        android:textSize="12sp"
+        android:text="THEO DÕI"
         android:textColor="@color/colorDot"
+        android:textSize="12sp"
         android:textStyle="bold" />
 
 

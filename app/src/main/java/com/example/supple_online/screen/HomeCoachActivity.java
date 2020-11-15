@@ -1,23 +1,20 @@
 package com.example.supple_online.screen;
+import android.os.Bundle;
+import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-
-import com.example.supple_online.helper.BaseActivity;
 import com.example.supple_online.R;
+import com.example.supple_online.helper.BaseActivity;
 import com.example.supple_online.main_fragment.FindFragment;
 import com.example.supple_online.main_fragment.HomeFragment;
 import com.example.supple_online.main_fragment.MallFragment;
 import com.example.supple_online.main_fragment.MapFragment;
 import com.example.supple_online.main_fragment.NotificationFrament;
-import com.example.supple_online.profile_fragment.MyOrderFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class HomeActivity extends BaseActivity {
+public class HomeCoachActivity extends BaseActivity {
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -31,27 +28,21 @@ public class HomeActivity extends BaseActivity {
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, selectFragment).commit();
                     break;
                 case R.id.navigation_mall:
-                    selectFragment = new MallFragment();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, selectFragment).commit();
+//                    selectFragment = new MallFragment();
+//                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, selectFragment).commit();
                     break;
                 case R.id.navigation_notifications:
-                    selectFragment = new NotificationFrament();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, selectFragment).commit();
-                    break;
-                case R.id.navigation_finding_coach:
-                    selectFragment = new FindFragment();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, selectFragment).commit();
-                    break;
+//                    selectFragment = new NotificationFrament();
+//                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, selectFragment).commit();
+//                    break;
                 case R.id.navigation_map:
-                    selectFragment = new MapFragment();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, selectFragment).commit();
-                    break;
+//                    selectFragment = new MapFragment();
+//                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, selectFragment).commit();
+//                    break;
             }
             return true;
         }
     };
-
-    public static BottomNavigationView navigation;
 
     @Override
     public void onBackPressed() {
@@ -61,9 +52,9 @@ public class HomeActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-        navigation = findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new HomeFragment()).commit();
+        setContentView(R.layout.activity_home_coach);
+        BottomNavigationView navigation_coach = findViewById(R.id.navigationCoach);
+        navigation_coach.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout_coach, new HomeFragment());
     }
 }

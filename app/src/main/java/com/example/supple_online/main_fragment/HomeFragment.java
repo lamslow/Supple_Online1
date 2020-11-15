@@ -1,6 +1,5 @@
 package com.example.supple_online.main_fragment;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -38,7 +37,7 @@ import com.smarteist.autoimageslider.SliderView;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.supple_online.screen.HomeActivity.navigation;
+import static com.example.supple_online.screen.HomeUserActivity.navigation;
 
 public class HomeFragment extends Fragment {
 
@@ -150,10 +149,10 @@ public class HomeFragment extends Fragment {
     private void getNewsHome() {
         newsList = new ArrayList<>();
         newsList.clear();
-        New news = new New(R.drawable.newest_news_gymroom, "Top 10 phòng tập tốt nhất khu vực Hải Phòng");
-        New news2 = new New(R.drawable.newest_news_gymevent, "Sự kiện 'Vì một gia đình khỏe mạnh' được tổ chức tại Hà Nội");
-        New news3 = new New(R.drawable.newest_news_stomachache, "Nguyên nhân dẫn đến cơn đau bụng mỗi đêm");
-        New news4 = new New(R.drawable.newest_news_tired, "Những cách giúp bạn giảm bớt căng thẳng sau giờ làm việc");
+        New news = new New(R.drawable.newest_news_gymroom, "Top 10 phòng tập tốt nhất khu vực Hải Phòng","https://camnanghaiphong.vn/top-10-phong-gym-xin-so-o-hai-phong");
+        New news2 = new New(R.drawable.newest_news_gymevent, "Sự kiện 'Vì một gia đình khỏe mạnh' được tổ chức tại Hà Nội", "http://www.hanoimoi.com.vn/tin-tuc/Doi-song/968972/nhieu-hoat-dong-tai-chuoi-su-kien-ngay-hoi-gia-dinh");
+        New news3 = new New(R.drawable.newest_news_stomachache, "Nguyên nhân dẫn đến cơn đau bụng mỗi đêm", "https://phuongdongdaitrang.vn/bi-dau-bung-ve-dem-va-gan-sang-co-nguy-hiem.html");
+        New news4 = new New(R.drawable.newest_news_tired, "Những cách giúp bạn giảm bớt căng thẳng sau giờ làm việc", "https://www.vinmec.com/vi/tin-tuc/thong-tin-suc-khoe/suc-khoe-tong-quat/16-cach-don-gian-de-giam-cang-thang-va-lo-au/");
         newsList.add(news);
         newsList.add(news2);
         newsList.add(news3);

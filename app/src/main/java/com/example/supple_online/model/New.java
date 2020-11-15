@@ -3,10 +3,12 @@ package com.example.supple_online.model;
 public class New {
     int image;
     String title;
+    String url;
 
-    public New(int image, String title) {
+    public New(int image, String title, String url) {
         this.image = image;
         this.title = title;
+        this.url = url;
     }
 
     public int getImage() {
@@ -23,5 +25,13 @@ public class New {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

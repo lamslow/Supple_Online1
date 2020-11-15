@@ -24,7 +24,7 @@ public class AskCapacityActivity extends BaseActivity {
         btnNextToAskAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startNewActivity(AskAddressActivity.class);
+                startNewActivity(SignUpActivity.class);
             }
         });
 

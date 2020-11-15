@@ -41,8 +41,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     public void onClick(View view) {
         if(view == tvDangKy) {
             startNewActivity(AskCapacityActivity.class);
-        } else if (view == btnSignIn){
-            startNewActivity(HomeActivity.class);
+        } else if (view == btnSignIn) {
+            startNewActivity(HomeUserActivity.class);
         } else if(view == tvForgotPass) {
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(this);
             View mView = View.inflate(this, R.layout.dialog_forget_password, null);

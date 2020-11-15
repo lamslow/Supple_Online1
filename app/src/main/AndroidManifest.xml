@@ -17,7 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".inbox_fragment.FollowedCoachFragment"></activity>
+        <activity android:name=".screen.HomeCoachActivity"></activity>
+        <activity android:name=".screen.DetailCoachActivity" />
+        <activity android:name=".inbox_fragment.FollowedCoachFragment" />
         <activity android:name=".screen.DetailProductActivity" />
         <activity android:name=".screen.DetailNewsActivity" />
         <activity android:name=".screen.AskCharacterActivity" />
@@ -48,7 +50,7 @@
         <activity android:name=".screen.SearchActivity" />
         <activity android:name=".screen.CartActivity" />
         <activity
-            android:name=".screen.HomeActivity"
+            android:name=".screen.HomeUserActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
             <intent-filter>
