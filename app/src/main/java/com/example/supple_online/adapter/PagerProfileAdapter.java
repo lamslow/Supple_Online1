@@ -4,14 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.supple_online.mall_fragment.SuppleFragment;
-import com.example.supple_online.mall_fragment.ToolsFragment;
-import com.example.supple_online.mall_fragment.ClothesFragment;
+import com.example.supple_online.profile_fragment.CoachFragment;
+import com.example.supple_online.profile_fragment.UserFragment;
 
-public class PagerAdapter extends FragmentStatePagerAdapter {
-    public PagerAdapter(@NonNull FragmentManager fm) {
+public class PagerProfileAdapter extends FragmentPagerAdapter {
+    public PagerProfileAdapter(@NonNull FragmentManager fm) {
         super(fm);
     }
 
@@ -21,13 +20,10 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
         Fragment fragment = null;
         switch (position) {
             case 0:
-                fragment = new ClothesFragment();
+                fragment = new UserFragment();
                 break;
             case 1:
-                fragment = new ToolsFragment();
-                break;
-            case 2:
-                fragment = new SuppleFragment();
+                fragment = new CoachFragment();
                 break;
         }
         return fragment;
@@ -35,7 +31,7 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 2;
     }
 
     @Nullable
@@ -44,13 +40,10 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
         String title = "";
         switch (position) {
             case 0:
-                title = "Whey";
+                title = "             Học Viên             ";
                 break;
             case 1:
-                title = "Mass";
-                break;
-            case 2:
-                title = "BCAA";
+                title = "            HLV             ";
                 break;
         }
         return title;

@@ -22,10 +22,6 @@
         <activity android:name=".inbox_fragment.FollowedCoachFragment" />
         <activity android:name=".screen.DetailProductActivity" />
         <activity android:name=".screen.DetailNewsActivity" />
-        <activity android:name=".screen.AskCharacterActivity" />
-        <activity android:name=".screen.AskAgeActivity" />
-        <activity android:name=".screen.AskTargetActivity" />
-        <activity android:name=".screen.AskAddressActivity" />
         <activity android:name=".screen.AskCapacityActivity" />
         <activity android:name=".screen.MatchProfileActivity" />
         <!--
@@ -63,7 +59,10 @@
         <activity android:name=".helper.BaseActivity" />
         <activity android:name=".screen.LoginActivity" />
         <activity android:name=".screen.SliderActivity" />
-        <activity android:name=".screen.SplashActivity" />
+        <activity android:name=".screen.profile_screen.MyOrderActivity" />
+        <activity android:name=".screen.SplashActivity" >
+
+        </activity>
     </application>
 
 </manifest>

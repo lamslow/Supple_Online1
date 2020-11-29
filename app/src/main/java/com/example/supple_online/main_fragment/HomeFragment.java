@@ -99,6 +99,7 @@ public class HomeFragment extends Fragment {
         btnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                System.out.println("aaa");
                 ProfileFragment profileFragment = new ProfileFragment();
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, profileFragment, "toProfileFragment")
                         .addToBackStack(null).commit();
