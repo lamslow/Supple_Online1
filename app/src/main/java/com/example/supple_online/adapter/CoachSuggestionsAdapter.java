@@ -21,6 +21,7 @@ public class CoachSuggestionsAdapter extends RecyclerView.Adapter<CoachSuggestio
     private Context context;
     private Context context2;
     private Context context3;
+    private Context context4;
     private List<Coach> coachesList;
 
 
