@@ -19,6 +19,7 @@ import java.util.List;
 public class CoachSuggestionsAdapter extends RecyclerView.Adapter<CoachSuggestionsAdapter.Holder> {
 
     private Context context;
+    private Context context2;
     private List<Coach> coachesList;
 
 
